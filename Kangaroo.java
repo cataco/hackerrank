@@ -1,13 +1,25 @@
-import java.io.;
-import java.util.;
-import java.text.;
-import java.math.;
-import java.util.regex.;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class Solution {
 
     static String kangaroo(int x1, int v1, int x2, int v2) {
-         Complete this function
+        String answer = "NO";
+        if(v2>v1){
+            return answer;
+        }
+        
+        while(x1<x2){
+            x1+=v1;
+            x2+=v2;
+            if(x1==x2){
+                answer = "YES";
+            }
+        }
+        return answer;
     }
 
     public static void main(String[] args) {
